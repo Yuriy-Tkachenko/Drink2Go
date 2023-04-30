@@ -1,8 +1,14 @@
 /* GLOBAL */
 @import "global/fonts";
 @import "global/variables";
+@import "global/mixins.scss";
 @import "global/global";
 
 
 /* BLOCKS */
-
+@import "blocks/header.scss";
+@import "blocks/offer.scss";
+@import "blocks/advantages.scss";
+@import "blocks/catalog.scss";
+@import "blocks/map.scss";
+@import "blocks/footer.scss";

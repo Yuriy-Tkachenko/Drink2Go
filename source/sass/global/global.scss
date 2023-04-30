@@ -19,6 +19,12 @@ ul {
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: 'Montserrat';
+  background-color: $base-white;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

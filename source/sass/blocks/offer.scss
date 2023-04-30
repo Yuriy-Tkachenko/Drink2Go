@@ -1,0 +1,138 @@
+.offer {
+  text-align: center;
+  margin-top: -17px;
+
+  @media(min-width: $desktop-width) {
+    
+  }
+}
+
+.offer-item {
+  background-color: $flat-white;
+  padding: 20px 0 60px 0;
+
+  @media(min-width: $tablet-width) {
+    position: relative;
+    margin-bottom: 248px;
+    padding: 60px 0 308px 0;
+  }
+
+  @media(min-width: $desktop-width) {
+    margin: 0;
+    padding: 30px 80px 84px 80px;
+    display: flex;
+  }
+}
+
+.offer-item__picture {
+  margin-bottom: 10px;
+
+  @media(min-width: $tablet-width) {
+    position: absolute;
+    bottom: -180px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  @media(min-width: $desktop-width) {
+    position: static;
+  }
+}
+
+.offer-item__description {
+  @media(min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.offer-item__raiting {
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  color: $base-primary;
+  margin-bottom: 4px;
+
+  @media(min-width: $desktop-width) {
+    margin-top: 150px;
+  }
+}
+
+.offer-item__name {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+
+  @media(min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  @media(min-width: $desktop-width) {
+    margin-bottom: 16px;
+  }
+}
+
+.offer-item__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+
+  @media(min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+    padding: 0 80px;
+  }
+
+  @media(min-width: $desktop-width) {
+    padding: 0;
+    width: 625px;
+    margin-bottom: 40px;
+  }
+}
+
+.old-price {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: $base-primary;
+  text-decoration-line: line-through;
+  margin-right: 6px;
+}
+
+.prise {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  margin-right: 20px;
+}
+
+.order-button {
+  @include button;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-white;
+  padding: 8px 20px;
+  background-color: $base-primary;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+  } 
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+  }
+}

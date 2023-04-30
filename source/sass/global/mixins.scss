@@ -42,3 +42,9 @@
     line-height: 32px;
   }
 }
+
+@mixin button {
+  border: none;
+  background: none;
+  padding: 0;
+}
