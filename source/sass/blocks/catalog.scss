@@ -154,7 +154,8 @@
   margin: 0;
 }
 
-.filter-option {
+.filter-item__option {
+  position: relative;
   margin-bottom: 20px;
 }
 
@@ -167,6 +168,15 @@
   background-color: $base-primary;
   left: 6px;
   top: 2px;
+
+  @media(min-width: $tablet-width) {
+    top: 1px;
+    left: 5.5px;
+  }
+
+  @media(min-width: $desktop-width) {
+    top: 2px;
+  }
 }
 
 .filter-option__label {
@@ -190,19 +200,22 @@
   }
 }
 
-.filter-option__switch-checkbox {
-  
+.filter-option__label--disabled {
+  color: $light-grey;
+
+  &:before {
+    border: 2px solid $light-grey;
+  }
 }
+//////////
 
-.filter-option__switch-slider {
 
-}
-
-.filter-option__switch-label {
+.filter-item__option-switch-label {
   display: block;
   padding-left: 52px;
   position: relative;
   cursor: pointer;
+  user-select: none;
 
   &:before {
     content: "";
@@ -220,12 +233,33 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    border-radius: 100%;
     background-color: $base-white;
+    border-radius: 100%;
     left: 2px;
+    top: -0.25px;
+    z-index: 2;
+    transition: all 0.2s ease;
   }
 }
 
+.filter-item__option-switch-input:checked + .filter-item__option-switch-label {
+  &:before {
+    background-color: $base-primary;
+  }
+
+  &:after {
+    left: 20px;
+  }
+}
+
+.filter-item__option-label--disabled {
+  color: $light-grey;
+
+  &:before {
+    background-color: $light-grey;
+  }
+}
+////////////////////////////
 .catalog__buttons-wrapper {
   text-align: center;
 
@@ -391,10 +425,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.order-panel__prise {
-
 }
 
 .order-panel__order-button {

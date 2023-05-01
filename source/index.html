@@ -200,51 +200,46 @@
                 <fieldset class="filter-item">
                   <legend class="filter-item__caption">Наличие молока</legend>
                   <ul class="filter-item__list">
-                    <li class="filter-option">
+                    <li class="filter-item__option">
                       <input class="filter-option__input visually-hidden" type="radio" name="radio" id="filter-no-matter" checked>
                       <label class="filter-option__label" for="filter-no-matter">Неважно</label>
                     </li>
-                    <li class="filter-option">
+                    <li class="filter-item__option">
                       <input class="filter-option__input visually-hidden" type="radio" name="radio" id="filter-only-natural">
                       <label class="filter-option__label" for="filter-only-natural">Только животное</label>
                     </li>
-                    <li class="filter-option">
+                    <li class="filter-item__option">
                       <input class="filter-option__input visually-hidden" type="radio" name="radio" id="filter-only-artifical">
                       <label class="filter-option__label" for="filter-only-artifical">Только растительное</label>
                     </li>
-                    <li class="filter-option">
-                      <input class="filter-option__input visually-hidden" type="radio" name="radio" id="filter-no-milk">
-                      <label class="filter-option__label" for="filter-no-milk">Без молока</label>
+                    <li class="filter-item__option">
+                      <input class="filter-option__input visually-hidden" type="radio" name="radio" id="filter-no-milk" disabled>
+                      <label class="filter-option__label filter-option__label--disabled" for="filter-no-milk">Без молока</label>
                     </li>
                   </ul>
                 </fieldset>
                 <fieldset class="filter-item">
                   <legend class="filter-item__caption">Страна произрастания</legend>
                     <ul class="filter-item__list">
-                      <li class="filter-option">
-                        <input class="filter-option__switch-checkbox visually-hidden" type="checkbox" name="checbox" checked>
-                        <span class="filter-option__switch-slider"></span>
-                        <label class="filter-option__switch-label" for="filter-no-milk">Бразилия</label>
+                      <li class="filter-item__option">
+                        <input class="filter-item__option-switch-input visually-hidden" type="checkbox" name="Brazil" id="filter-country-brazil" checked>
+                        <label class="filter-item__option-switch-label" for="filter-country-brazil">Бразилия</label>
                       </li>
-                      <li class="filter-option">
-                        <input class="filter-option__switch-checkbox visually-hidden" type="checkbox" name="checbox">
-                        <span class="filter-option__switch-slider"></span>
-                        <label class="filter-option__switch-label" for="filter-no-milk">Эфиопия</label>
+                      <li class="filter-item__option">
+                        <input class="filter-item__option-switch-input visually-hidden" type="checkbox" name="Ethiopia" id="filter-country-ethiopia">
+                        <label class="filter-item__option-switch-label" for="filter-country-ethiopia">Эфиопия</label>
                       </li>
-                      <li class="filter-option">
-                        <input class="filter-option__switch-checkbox visually-hidden" type="checkbox" name="checbox">
-                        <span class="filter-option__switch-slider"></span>
-                        <label class="filter-option__switch-label" for="filter-no-milk">Колумбия</label>
+                      <li class="filter-item__option">
+                        <input class="filter-item__option-switch-input visually-hidden" type="checkbox" name="Colombia" id="filter-country-colombia">
+                        <label class="filter-item__option-switch-label" for="filter-country-colombia">Колумбия</label>
                       </li>
-                      <li class="filter-option">
-                        <input class="filter-option__switch-checkbox visually-hidden" type="checkbox" name="checbox">
-                        <span class="filter-option__switch-slider"></span>
-                        <label class="filter-option__switch-label" for="filter-no-milk">Коста-Рика</label>
+                      <li class="filter-item__option">
+                        <input class="filter-item__option-switch-input visually-hidden" type="checkbox" name="Costa-riсa" id="filter-country-costa-rica">
+                        <label class="filter-item__option-switch-label" for="filter-country-costa-rica">Коста-Рика</label>
                       </li>
-                      <li class="filter-option">
-                        <input class="filter-option__switch-checkbox visually-hidden" type="checkbox" name="checbox">
-                        <span class="filter-option__switch-slider"></span>
-                        <label class="filter-option__switch-label" for="filter-no-milk">Перу</label>
+                      <li class="filter-item__option">
+                        <input class="filter-item__option-switch-input visually-hidden" type="checkbox" name="Peru" id="filter-country-peru" disabled>
+                        <label class="filter-item__option-switch-label filter-item__option-label--disabled" for="filter-country-peru">Перу</label>
                       </li>
                     </ul>
                 </fieldset>
