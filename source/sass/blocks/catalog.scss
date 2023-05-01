@@ -54,10 +54,6 @@
 .filter-item {
   border: none;
   padding: 0;
-
-  @media(min-width: $tablet-width) {
-    
-  }
 }
 
 .filter-item__caption {
@@ -284,7 +280,6 @@
   color: $base-primary;
   width: 100%;
   padding: 8px;
-  //margin-bottom: 40px;
   background-color: $base-white;
   border-radius: 4px;
 

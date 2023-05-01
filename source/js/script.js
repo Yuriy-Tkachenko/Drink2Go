@@ -7,11 +7,12 @@ const SHOP__LOCATION = {
   title: 'Drink2Go' 
 };
 
-const map = L.map('map')
+const map = L.map('map', { scrollWheelZoom: false })
   .setView({
     lat: SHOP__LOCATION.lat,
     lng: SHOP__LOCATION.lng,
-  }, 20);
+  }, 20)
+  ;
 
 L.tileLayer(
   'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -47,6 +48,5 @@ const swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
   },
-  mousewheel: true,
   keyboard: true,
 })

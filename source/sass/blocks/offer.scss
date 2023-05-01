@@ -54,6 +54,7 @@
   letter-spacing: 0.04em;
   color: $base-primary;
   margin-bottom: 4px;
+  text-transform: uppercase;
 
   @media(min-width: $desktop-width) {
     margin-top: 150px;
@@ -135,4 +136,47 @@
   &:disabled {
     background-color: $base-grey;
   }
+}
+
+.swiper-pagination {
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  &:after {
+    font-size: 20px!important;
+    color: $base-primary;
+  }
+
+  top: 50%!important;
+
+  @media(min-width: $tablet-width) {
+    top: 34%!important;
+  }
+
+  @media(min-width: $desktop-width) {
+    top: 52%!important;
+  }
+}
+
+.swiper-pagination {
+  display: none;
+
+  @media(min-width: $desktop-width) {
+    display: block;
+    top: 87%;
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: $base-white!important;
+  opacity: 1!important;
+  width: 62px!important;
+  height: 4px!important;
+  border-radius: 0%!important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $base-primary!important;
+  opacity: none!important;
 }
