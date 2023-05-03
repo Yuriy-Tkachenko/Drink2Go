@@ -216,6 +216,7 @@
 
 .log-in-button {
   @include button;
+  font-family: "Montserrat", sans-serif;
   padding: 21px;
 
   @media (min-width: $tablet-width) {
@@ -255,6 +256,7 @@
 
 .basket-button {
   @include button;
+  font-family: "Montserrat", sans-serif;
   padding: 21px;
 
   @media (min-width: $tablet-width) {
