@@ -1,47 +1,60 @@
 .offer {
   text-align: center;
-  margin-top: -17px;
-
-  @media(min-width: $desktop-width) {
-    
-  }
 }
 
 .offer-item {
-  background-color: $flat-white;
   padding: 20px 0 60px 0;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     position: relative;
     margin-bottom: 248px;
     padding: 60px 0 308px 0;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     margin: 0;
     padding: 30px 80px 84px 80px;
     display: flex;
+    justify-content: space-between;
   }
 }
 
+.offer-item--first-slide {
+  background-color: $flat-white;
+}
+
+.offer-item--second-slide {
+  background-color: $lavender-latte;
+}
+
+.offer-item--third-slide {
+  background-color: $espresso;
+}
+
 .offer-item__picture {
+  width: 280px;
+  height: 280px;
   margin-bottom: 10px;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     position: absolute;
     bottom: -180px;
     left: 0;
     right: 0;
     margin: auto;
+    width: 476px;
+    height: 476px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     position: static;
+    width: 600px;
+    height: 600px;
   }
 }
 
 .offer-item__description {
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     text-align: left;
   }
 }
@@ -56,7 +69,7 @@
   margin-bottom: 4px;
   text-transform: uppercase;
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     margin-top: 150px;
   }
 }
@@ -68,12 +81,12 @@
   letter-spacing: 0.02em;
   margin-bottom: 10px;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 56px;
     line-height: 80px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 16px;
   }
 }
@@ -85,13 +98,13 @@
   padding: 0 20px;
   margin-bottom: 20px;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 32px;
     padding: 0 80px;
   }
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 0;
     width: 625px;
     margin-bottom: 40px;
@@ -123,60 +136,78 @@
   padding: 8px 20px;
   background-color: $base-primary;
   border-radius: 4px;
-
-  &:hover,
-  &:focus {
-    background-color: $primary-lighter;
-  } 
-
-  &:active {
-    background-color: $primary-darker;
-  }
-
-  &:disabled {
-    background-color: $base-grey;
-  }
-}
-
-.swiper-pagination {
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  &:after {
-    font-size: 20px!important;
+  top: 3.9% !important;
+  height: 100% !important;
+
+  @media (min-width: $tablet-width) {
+    top: 2.5% !important;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 3% !important;
+    width: 80px !important;
+  }
+
+  &::after {
+    font-size: 20px !important;
     color: $base-primary;
   }
+}
 
-  top: 50%!important;
+.swiper-button-prev {
+  left: 0 !important;
 
-  @media(min-width: $tablet-width) {
-    top: 34%!important;
+  &:hover {
+    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   }
 
-  @media(min-width: $desktop-width) {
-    top: 52%!important;
+  &:active {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+}
+
+.swiper-button-next {
+  right: 0 !important;
+
+  &:hover {
+    background: linear-gradient(266.81deg, #ffffff 3.05%, rgba(255, 255, 255, 0) 97.77%);
+  }
+
+  &:active {
+    background: linear-gradient(266.81deg, rgba(120, 89, 207, 0.25) 2.87%, rgba(120, 89, 207, 0) 97.6%);
   }
 }
 
 .swiper-pagination {
   display: none;
 
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     display: block;
     top: 87%;
   }
 }
 
 .swiper-pagination-bullet {
-  background-color: $base-white!important;
-  opacity: 1!important;
-  width: 62px!important;
-  height: 4px!important;
-  border-radius: 0%!important;
+  background-color: $base-white !important;
+  opacity: 1 !important;
+  width: 62px !important;
+  height: 4px !important;
+  border-radius: 0% !important;
+
+  &:hover {
+    background-color: $primary-opacity !important;
+  }
+
+  &:active {
+    background-color: $base-primary !important;
+  }
 }
 
 .swiper-pagination-bullet-active {
-  background-color: $base-primary!important;
-  opacity: none!important;
+  background-color: $base-primary !important;
+  opacity: none !important;
 }

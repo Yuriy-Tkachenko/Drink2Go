@@ -4,7 +4,7 @@
   letter-spacing: 0.02em;
   font-weight: 700;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 56px;
     line-height: 80px;
   }
@@ -15,9 +15,9 @@
   font-size: 24px;
   line-height: 36px;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 42px;
-    line-height: 64px;  
+    line-height: 64px;
   }
 }
 
@@ -26,7 +26,7 @@
   font-size: 18px;
   line-height: 32px;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 24px;
     line-height: 36px;
   }
@@ -37,7 +37,7 @@
   font-size: 14px;
   line-height: 20px;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 32px;
   }
@@ -47,4 +47,28 @@
   border: none;
   background: none;
   padding: 0;
+
+  &:disabled {
+    background-color: $base-grey;
+  }
+}
+
+@mixin white-button {
+  border: none;
+  background: none;
+
+  &:hover {
+    background-color: $primary-lighter;
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+    color: $base-white;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+    color: $base-white;
+  }
 }
