@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   </head>
@@ -211,19 +211,19 @@
                   <legend class="filter-item__caption">Наличие молока</legend>
                   <ul class="filter-item__list">
                     <li class="filter-item__option">
-                      <input class="filter-item__option-input visually-hidden" type="radio" name="radio" id="filter-no-matter" checked>
+                      <input class="filter-item__option-input visually-hidden" type="radio" name="radio" id="filter-no-matter" value="no-matter" checked>
                       <label class="filter-item__option-label" for="filter-no-matter">Неважно</label>
                     </li>
                     <li class="filter-item__option">
-                      <input class="filter-item__option-input visually-hidden" type="radio" name="radio" id="filter-only-natural">
+                      <input class="filter-item__option-input visually-hidden" type="radio" name="radio" id="filter-only-natural" value="only-natural">
                       <label class="filter-item__option-label" for="filter-only-natural">Только животное</label>
                     </li>
                     <li class="filter-item__option">
-                      <input class="filter-item__option-input visually-hidden" type="radio" name="radio" id="filter-only-artifical">
+                      <input class="filter-item__option-input visually-hidden" type="radio" name="radio" id="filter-only-artifical" value="only-artifical">
                       <label class="filter-item__option-label" for="filter-only-artifical">Только растительное</label>
                     </li>
                     <li class="filter-item__option">
-                      <input class="filter-item__option-input visually-hidden" type="radio" name="radio" id="filter-no-milk" disabled>
+                      <input class="filter-item__option-input visually-hidden" type="radio" name="radio" id="filter-no-milk" value="no-milk" disabled>
                       <label class="filter-item__option-label filter-item__option-label--disabled" for="filter-no-milk">Без молока</label>
                     </li>
                   </ul>
@@ -232,23 +232,23 @@
                   <legend class="filter-item__caption">Страна произрастания</legend>
                     <ul class="filter-item__list">
                       <li class="filter-item__option">
-                        <input class="filter-item__option-switch-input visually-hidden" type="checkbox" name="Brazil" id="filter-country-brazil" checked>
+                        <input class="filter-item__option-switch-input visually-hidden" type="checkbox" name="infos" value="Brazil" id="filter-country-brazil">
                         <label class="filter-item__option-switch-label" for="filter-country-brazil">Бразилия</label>
                       </li>
                       <li class="filter-item__option">
-                        <input class="filter-item__option-switch-input visually-hidden" type="checkbox" name="Ethiopia" id="filter-country-ethiopia">
+                        <input class="filter-item__option-switch-input visually-hidden" type="checkbox" name="infos" value="Ethiopia" id="filter-country-ethiopia">
                         <label class="filter-item__option-switch-label" for="filter-country-ethiopia">Эфиопия</label>
                       </li>
                       <li class="filter-item__option">
-                        <input class="filter-item__option-switch-input visually-hidden" type="checkbox" name="Colombia" id="filter-country-colombia">
+                        <input class="filter-item__option-switch-input visually-hidden" type="checkbox" name="infos" value="Colombia" id="filter-country-colombia">
                         <label class="filter-item__option-switch-label" for="filter-country-colombia">Колумбия</label>
                       </li>
                       <li class="filter-item__option">
-                        <input class="filter-item__option-switch-input visually-hidden" type="checkbox" name="Costa-riсa" id="filter-country-costa-rica">
+                        <input class="filter-item__option-switch-input visually-hidden" type="checkbox" name="infos" value="Costa-riсa" id="filter-country-costa-rica">
                         <label class="filter-item__option-switch-label" for="filter-country-costa-rica">Коста-Рика</label>
                       </li>
                       <li class="filter-item__option">
-                        <input class="filter-item__option-switch-input visually-hidden" type="checkbox" name="Peru" id="filter-country-peru" disabled>
+                        <input class="filter-item__option-switch-input visually-hidden" type="checkbox" name="infos" value="Peru" id="filter-country-peru" disabled>
                         <label class="filter-item__option-switch-label filter-item__option-switch-label--disabled" for="filter-country-peru">Перу</label>
                       </li>
                     </ul>
@@ -274,116 +274,7 @@
                   <div class="dropdown-group__sort-button"></div>
                 </div>
               </div>
-              <ul class="result-list">
-                <li class="result-list__item">
-                  <a class="result-list__item-link" href="#">
-                    <picture>
-                      <source type="image/webp" srcset="img/white-coffee@1x.webp 1x, img/white-coffee@2x.webp 2x">
-                      <img class="result-list__picture" src="img/white-coffee@1x.png" srcset="img/white-coffee@2x.png" alt="фотография напитка декаф флэт уайт" width="130" height="188">
-                    </picture>
-                  </a>
-                  <a class="result-list__name" href="#">Декаф Флэт Уайт</a>
-                  <p class="result-list__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="order-panel">
-                    <span class="order-panel__prise prise">225₽</span>
-                    <button class="order-panel__order-button order-button" type="button">В корзину
-                      <svg class="order-panel__button-icon" width="20" height="16">
-                        <use href="img/icons/stack.svg#add-to-basket"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </li>
-                <li class="result-list__item">
-                  <a class="result-list__item-link" href="#">
-                    <picture>
-                      <source type="image/webp" srcset="img/violet-coffee@1x.webp 1x, img/violet-coffee@2x.webp 2x">
-                      <img class="result-list__picture" src="img/violet-coffee@1x.png" srcset="img/violet-coffee@2x.png" alt="фотография напитка декаф флэт уайт" width="130" height="188">
-                    </picture>
-                  </a>
-                  <a class="result-list__name" href="#">Декаф Флэт Уайт</a>
-                  <p class="result-list__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="order-panel">
-                    <span class="order-panel__prise prise">225₽</span>
-                    <button class="order-panel__order-button order-button" type="button">В корзину
-                      <svg class="order-panel__button-icon" width="20" height="16">
-                        <use href="img/icons/stack.svg#add-to-basket"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </li>
-                <li class="result-list__item">
-                  <a class="result-list__item-link" href="#">
-                    <picture>
-                      <source type="image/webp" srcset="img/black-coffee@1x.webp 1x, img/black-coffee@2x.webp 2x">
-                      <img class="result-list__picture" src="img/black-coffee@1x.png" srcset="img/black-coffee@2x.png" alt="фотография напитка декаф флэт уайт" width="130" height="188">
-                    </picture>
-                  </a>
-                  <a class="result-list__name" href="#">Декаф Флэт Уайт</a>
-                  <p class="result-list__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="order-panel">
-                    <span class="order-panel__prise prise">225₽</span>
-                    <button class="order-panel__order-button order-button" type="button">В корзину
-                      <svg class="order-panel__button-icon" width="20" height="16">
-                        <use href="img/icons/stack.svg#add-to-basket"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </li>
-                <li class="result-list__item">
-                  <a class="result-list__item-link" href="#">
-                    <picture>
-                      <source type="image/webp" srcset="img/pink-coffee@1x.webp 1x, img/pink-coffee@2x.webp 2x">
-                      <img class="result-list__picture" src="img/pink-coffee@1x.png" srcset="img/pink-coffee@2x.png" alt="фотография напитка декаф флэт уайт" width="130" height="188">
-                    </picture>
-                  </a>
-                  <a class="result-list__name" href="#">Декаф Флэт Уайт</a>
-                  <p class="result-list__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="order-panel">
-                    <span class="order-panel__prise prise">225₽</span>
-                    <button class="order-panel__order-button order-button" type="button">В корзину
-                      <svg class="order-panel__button-icon" width="20" height="16">
-                        <use href="img/icons/stack.svg#add-to-basket"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </li>
-                <li class="result-list__item">
-                  <a class="result-list__item-link" href="#">
-                    <picture>
-                      <source type="image/webp" srcset="img/brown-coffee@1x.webp 1x, img/brown-coffee@2x.webp 2x">
-                      <img class="result-list__picture" src="img/brown-coffee@1x.png" srcset="img/brown-coffee@2x.png" alt="фотография напитка декаф флэт уайт" width="130" height="188">
-                    </picture>
-                  </a>
-                  <a class="result-list__name" href="#">Декаф Флэт Уайт</a>
-                  <p class="result-list__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="order-panel">
-                    <span class="order-panel__prise prise">225₽</span>
-                    <button class="order-panel__order-button order-button" type="button">В корзину
-                      <svg class="order-panel__button-icon" width="20" height="16">
-                        <use href="img/icons/stack.svg#add-to-basket"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </li>
-                <li class="result-list__item">
-                  <a class="result-list__item-link" href="#">
-                    <picture>
-                      <source type="image/webp" srcset="img/yellow-coffee@1x.webp 1x, img/yellow-coffee@2x.webp 2x">
-                      <img class="result-list__picture" src="img/yellow-coffee@1x.png" srcset="img/yellow-coffee@2x.png" alt="фотография напитка декаф флэт уайт" width="130" height="188">
-                    </picture>
-                  </a>
-                  <a class="result-list__name" href="#">Декаф Флэт Уайт</a>
-                  <p class="result-list__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="order-panel">
-                    <span class="order-panel__prise prise">225₽</span>
-                    <button class="order-panel__order-button order-button" type="button">В корзину
-                      <svg class="order-panel__button-icon" width="20" height="16">
-                        <use href="img/icons/stack.svg#add-to-basket"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </li>
-              </ul>
+              <ul class="result-list"></ul>
               <div class="result-navigation">
                 <button class="result-navigation__button-back" type="button">
                   <span class="result-navigation__content">Назад</span>
