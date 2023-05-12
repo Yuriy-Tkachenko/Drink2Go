@@ -21,7 +21,7 @@ radioInputs.forEach( element => {
     if (this.value == 'no-matter' && noMatterInput.checked) {
       noMatterInput.setAttribute('checked', 'true');
       onlyNaturalInput.removeAttribute('checked');
-      onlyArtificallInput.cremoveAttribute('checked');
+      onlyArtificallInput.removeAttribute('checked');
       return true;
     }
 

@@ -70,38 +70,43 @@
   margin-bottom: 30px;
 }
 
-.range-filter__controls {
-  position: relative;
-  margin-bottom: 34px;
+.range-filter__slider {
+  margin-bottom: 33px;
 }
 
-.range-filter__scale {
+.range-filter .noUi-horizontal {
   height: 2px;
-  background-color: $light-grey;
-  display: flex;
-  align-items: center;
 }
 
-.range-filter__bar {
-  height: 3px;
+.range-filter .noUi-target {
+  background: $light-grey;
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+}
+
+.noUi-connects .noUi-connect {
   background-color: $primary-lighter;
-  width: 80%;
 }
 
-.range-filter__toggle {
-  width: 24px;
-  height: 24px;
-  border-radius: 100%;
+.noUi-origin .noUi-handle {
   border: 2px solid $primary-lighter;
-  background-color: $base-white;
-  position: absolute;
+  border-radius: 100%;
+  position: relative;
+
+  &::after,
+  &::before {
+    display: none;
+  }
 }
 
-.range-filter__toggle-point {
+.noUi-touch-area {
+  position: absolute;
   width: 16px;
   height: 16px;
+  left: 2px;
+  top: 2px;
   border-radius: 100%;
-  margin: 2.5px 0 0 2.5px;
 
   &:hover {
     background-color: $primary-opacity;
@@ -112,18 +117,10 @@
   }
 }
 
-.range-filter__disabled {
-  background-color: $base-grey;
-}
-
-.range-filter__toggle--toggle-min {
-  left: 0;
-  bottom: -12px;
-}
-
-.range-filter__toggle--toggle-max {
-  right: 20%;
-  bottom: -12px;
+.noUi-origin .noUi-handle {
+  width: 24px;
+  height: 24px;
+  top: -10px;
 }
 
 .price-controls {
@@ -209,17 +206,15 @@
   height: 16px;
   border-radius: 100%;
   background-color: $base-primary;
-  left: 6px;
-  top: 1.5px;
+  top: 6.5%;
+  left: 1.6%;
 
   @media (min-width: $tablet-width) {
-    top: 2px;
-    left: 5.5px;
+    left: 3%;
   }
 
   @media (min-width: $desktop-width) {
-    top: 1.5px;
-    left: 5.7px;
+    left: 2%;
   }
 }
 
@@ -230,17 +225,15 @@
   height: 16px;
   border-radius: 100%;
   background-color: $primary-opacity;
-  left: 6px;
-  top: 2px;
+  top: 6.5%;
+  left: 1.6%;
 
   @media (min-width: $tablet-width) {
-    top: 1px;
-    left: 5.5px;
+    left: 3%;
   }
 
   @media (min-width: $desktop-width) {
-    top: 1.2px;
-    left: 5.7px;
+    left: 2%;
   }
 }
 

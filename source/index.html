@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2">
     <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2">
     <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2">
     <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2">
+    <link rel="stylesheet" href="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="header">
@@ -186,23 +187,13 @@
                 <fieldset class="filter-item">
                   <legend class="filter-item__caption">Цена</legend>
                   <div class="range-filter">
-                    <div class="range-filter__controls">
-                      <div class="range-filter__scale">
-                        <div class="range-filter__bar"></div>
-                      </div>
-                      <div class="range-filter__toggle range-filter__toggle--toggle-min">
-                        <div class="range-filter__toggle-point"></div>
-                      </div>
-                      <div class="range-filter__toggle range-filter__toggle--toggle-max">
-                        <div class="range-filter__toggle-point"></div>
-                      </div>
-                    </div>
+                    <div class="range-filter__slider"></div>
                     <div class="price-controls">
                       <label class="price-controls__min-price price-control" for="min-price">
-                        <input class="price-controls__input" type="number" name="min-price" placeholder="0" id="min-price">
+                        <input class="price-controls__input" type="number" name="min-price" value="" min="0" max="500" placeholder="0" id="min-price">
                       </label>
                       <label class="price-controls__max-price price-control" for="max-price">
-                        <input class="price-controls__input" type="number" name="min-price" placeholder="999" id="max-price">
+                        <input class="price-controls__input" type="number" name="min-price" value="" min="0" max="500" placeholder="999" id="max-price">
                       </label>
                     </div>
                   </div>
@@ -244,7 +235,7 @@
                         <label class="filter-item__option-switch-label" for="filter-country-colombia">Колумбия</label>
                       </li>
                       <li class="filter-item__option">
-                        <input class="filter-item__option-switch-input visually-hidden" type="checkbox" name="infos" value="Costa-riсa" id="filter-country-costa-rica">
+                        <input class="filter-item__option-switch-input visually-hidden" type="checkbox" name="infos" value="Costa-Rica" id="filter-country-costa-rica">
                         <label class="filter-item__option-switch-label" for="filter-country-costa-rica">Коста-Рика</label>
                       </li>
                       <li class="filter-item__option">
@@ -275,7 +266,7 @@
                 </div>
               </div>
               <ul class="result-list"></ul>
-              <div class="result-navigation">
+              <div class="result-navigation visually-hidden">
                 <button class="result-navigation__button-back" type="button">
                   <span class="result-navigation__content">Назад</span>
                 </button>
@@ -394,6 +385,7 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <script src="./js/script.js" type="module"></script>
   </body>

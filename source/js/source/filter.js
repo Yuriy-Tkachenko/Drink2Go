@@ -1,5 +1,5 @@
 import products from "./mocks.js";
-import { createCards } from "./products.js";
+import {createCards} from "./products.js";
 
 // Product elements
 const productList = document.querySelector('.result-list');
@@ -8,16 +8,29 @@ const filterForm = document.querySelector('.catalog__form');
 const switchInputs = filterForm.querySelectorAll('.filter-item__option-switch-input');
 const submitButton = filterForm.querySelector('.submit-button');
 const resetButton = filterForm.querySelector('.reset-button');
+const sliderElement = document.querySelector('.range-filter__slider');
+
+function checkPriceValues(range, number) {
+  if (number >= range[0] && number <= range[1]) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 submitButton.addEventListener('click', function(evt) {
   evt.preventDefault();
+
   const selectedInputsValue = Array.from(filterForm.querySelectorAll('.filter-item__option-switch-input:checked'), n => n.value);
-  const selectedRadioValue = Array.from(filterForm.querySelectorAll('.filter-item__option-input:checked'), n => n.value)
+  const selectedRadioValue = Array.from(filterForm.querySelectorAll('.filter-item__option-input:checked'), n => n.value);
+  const priceValues = sliderElement.noUiSlider.get();
+  
+  checkPriceValues(priceValues, 255)
 
   productList.innerHTML = products
     .filter(product => 
-      selectedInputsValue.includes(product.infos.maker) && selectedRadioValue.includes(product.infos.milk) ||
-      selectedInputsValue.includes(product.infos.maker) && selectedRadioValue.includes(product.infos.important))
+      checkPriceValues(priceValues, product.infos.price) && selectedInputsValue.includes(product.infos.maker) && selectedRadioValue.includes(product.infos.milk) ||
+      checkPriceValues(priceValues, product.infos.price) && selectedInputsValue.includes(product.infos.maker) && selectedRadioValue.includes(product.infos.important))
     .map(products => `
       <li class="result-list__item">
         <a class="result-list__item-link" href="#">
@@ -42,6 +55,7 @@ submitButton.addEventListener('click', function(evt) {
 })
 
 resetButton.addEventListener('click', function() {
+  sliderElement.noUiSlider.reset();
   switchInputs.forEach(element => {
     element.removeAttribute('checked');
   })

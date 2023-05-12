@@ -55,7 +55,7 @@ const products = [
     name: 'Декаф Флэт Пинк',
     description: 'Кофе без кофеина из Коста-Рика с натуральным фермерским молоком',
     infos: {
-      maker: 'Costa-rica',
+      maker: 'Costa-Rica',
       price: 350,
       milk: 'only-natural',
       important: 'no-matter'
