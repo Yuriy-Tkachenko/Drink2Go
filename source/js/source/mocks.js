@@ -7,7 +7,8 @@ const products = [
       maker: 'Brazil',
       price: 225,
       milk: 'only-artifical',
-      important: 'no-matter'
+      important: 'no-matter',
+      raiting: 2,
     },
     image: {
       src: 'img/white-coffee@1x.png',
@@ -24,7 +25,8 @@ const products = [
       maker: 'Colombia',
       price: 288,
       milk: 'only-artifical',
-      important: 'no-matter'
+      important: 'no-matter',
+      raiting: 4,
     },
     image: {
       src: 'img/violet-coffee@1x.png',
@@ -41,7 +43,8 @@ const products = [
       maker: 'Ethiopia',
       price: 320,
       milk: 'only-artifical',
-      important: 'no-matter'
+      important: 'no-matter',
+      raiting: 5,
     },
     image: {
       src: 'img/black-coffee@1x.png',
@@ -58,7 +61,8 @@ const products = [
       maker: 'Costa-Rica',
       price: 350,
       milk: 'only-natural',
-      important: 'no-matter'
+      important: 'no-matter',
+      raiting: 3,
     },
     image: {
       src: 'img/pink-coffee@1x.png',
@@ -75,7 +79,8 @@ const products = [
       maker: 'Brazil',
       price: 180,
       milk: 'only-natural',
-      important: 'no-matter'
+      important: 'no-matter',
+      raiting: 1,
     },
     image: {
       src: 'img/brown-coffee@1x.png',
@@ -92,7 +97,8 @@ const products = [
       maker: 'Ethiopia',
       price: 400,
       milk: 'only-natural',
-      important: 'no-matter'
+      important: 'no-matter',
+      raiting: 6,
     },
     image: {
       src: 'img/yellow-coffee@1x.png',

@@ -71,6 +71,7 @@
 }
 
 .range-filter__slider {
+  width: 100%;
   margin-bottom: 33px;
 }
 
@@ -207,7 +208,7 @@
   border-radius: 100%;
   background-color: $base-primary;
   top: 6.5%;
-  left: 1.6%;
+  left: 6px;
 
   @media (min-width: $tablet-width) {
     left: 3%;
@@ -454,6 +455,8 @@
 }
 
 .result {
+  width: 100%;
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;

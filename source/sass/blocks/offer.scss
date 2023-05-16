@@ -136,6 +136,14 @@
   padding: 8px 20px;
   background-color: $base-primary;
   border-radius: 4px;
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
 }
 
 .swiper-button-next,

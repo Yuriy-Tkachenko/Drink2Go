@@ -24,15 +24,13 @@ submitButton.addEventListener('click', function(evt) {
   const selectedInputsValue = Array.from(filterForm.querySelectorAll('.filter-item__option-switch-input:checked'), n => n.value);
   const selectedRadioValue = Array.from(filterForm.querySelectorAll('.filter-item__option-input:checked'), n => n.value);
   const priceValues = sliderElement.noUiSlider.get();
-  
-  checkPriceValues(priceValues, 255)
 
   productList.innerHTML = products
     .filter(product => 
       checkPriceValues(priceValues, product.infos.price) && selectedInputsValue.includes(product.infos.maker) && selectedRadioValue.includes(product.infos.milk) ||
       checkPriceValues(priceValues, product.infos.price) && selectedInputsValue.includes(product.infos.maker) && selectedRadioValue.includes(product.infos.important))
     .map(products => `
-      <li class="result-list__item">
+      <li class="result-list__item" data-raiting=${products.infos.raiting}>
         <a class="result-list__item-link" href="#">
           <picture>
             <source type="image/webp" srcset="${products.image.webp1x} 1x, ${products.image.webp2x} 2x">

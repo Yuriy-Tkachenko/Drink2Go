@@ -6,6 +6,8 @@ function generateProduct() {
   for (let i = 0; i < products.length; i++) {
     const productItem = document.createElement('li');
     productItem.classList.add('result-list__item');
+    productItem.dataset.raiting = `${products[i].infos.raiting}`;
+    productItem.dataset.price = `${products[i].infos.price}`;
     productItem.innerHTML = `
       <a class="result-list__item-link" href="#">
         <picture>
