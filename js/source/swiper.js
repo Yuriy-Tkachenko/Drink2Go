@@ -1,0 +1,1 @@
+const getSwiper=()=>new Swiper(".mySwiper",{navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:".swiper-pagination",clickable:!0},keyboard:!0});getSwiper();export{getSwiper};
