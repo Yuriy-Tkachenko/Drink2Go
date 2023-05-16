@@ -1,0 +1,45 @@
+.developer-info {
+  text-align: center;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 40px;
+  }
+}
+
+.developer-info__link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  display: inline-block;
+  color: $base-grey;
+  padding-right: 16px;
+
+  &:hover {
+    color: $base-primary;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+}
+
+.developer-info__link:hover > .developer-info__logo {
+  fill: $base-primary;
+}
+
+.developer-info__link:active > .developer-info__logo {
+  fill: $primary-darker;
+}
+
+.developer-info__logo {
+  position: absolute;
+  right: 0;
+  top: 4px;
+  fill: $base-grey;
+}
+
+.developer-info__wrapper {
+  display: inline-block;
+  position: relative;
+}

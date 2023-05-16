@@ -1,0 +1,13 @@
+.description {
+  display: block;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 64px;
+  }
+}

@@ -1,0 +1,41 @@
+.user-navigation {
+  height: 60px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $desktop-width) {
+    height: 100%;
+  }
+}
+
+.user-navigation-list {
+  display: flex;
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    height: 100%;
+  }
+}
+
+.user-navigation-item {
+  &:active {
+    background-color: $base-secondary;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+  }
+}
+
+.user-navigation-item--disable {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

@@ -26,7 +26,7 @@ submitButton.addEventListener('click', function(evt) {
   const priceValues = sliderElement.noUiSlider.get();
 
   productList.innerHTML = products
-    .filter(product => 
+    .filter(product =>
       checkPriceValues(priceValues, product.infos.price) && selectedInputsValue.includes(product.infos.maker) && selectedRadioValue.includes(product.infos.milk) ||
       checkPriceValues(priceValues, product.infos.price) && selectedInputsValue.includes(product.infos.maker) && selectedRadioValue.includes(product.infos.important))
     .map(products => `

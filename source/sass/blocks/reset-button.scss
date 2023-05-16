@@ -1,0 +1,36 @@
+.reset-button {
+  @include button;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-primary;
+  width: 100%;
+  padding: 8px;
+  background-color: $base-white;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $primary-lighter;
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+    color: $base-white;
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+    color: $base-white;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 137px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 100%;
+  }
+}

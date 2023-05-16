@@ -4,11 +4,38 @@
 @import "global/mixins.scss";
 @import "global/global";
 
-
 /* BLOCKS */
 @import "blocks/header.scss";
+@import "blocks/logo.scss";
+@import "blocks/site-navigation.scss";
+@import "blocks/user-navigation.scss";
+@import "blocks/close-button.scss";
+@import "blocks/open-button.scss";
+@import "blocks/log-in-button.scss";
+@import "blocks/basket-button.scss";
+@import "blocks/mobile-navigation.scss";
 @import "blocks/offer.scss";
+@import "blocks/price.scss";
+@import "blocks/order-button.scss";
+@import "blocks/swiper.scss";
+@import "blocks/title.scss";
+@import "blocks/description.scss";
 @import "blocks/advantages.scss";
+@import "blocks/item-icon.scss";
 @import "blocks/catalog.scss";
+@import "blocks/filter-item.scss";
+@import "blocks/range-filter.scss";
+@import "blocks/noUi.scss";
+@import "blocks/price-controls.scss";
+@import "blocks/submit-button.scss";
+@import "blocks/reset-button.scss";
+@import "blocks/result.scss";
+@import "blocks/dropdown.scss";
+@import "blocks/order-panel.scss";
+@import "blocks/result-navigation.scss";
 @import "blocks/map.scss";
-@import "blocks/footer.scss";
+@import "blocks/container-wrapper.scss";
+@import "blocks/links-panel.scss";
+@import "blocks/social.scss";
+@import "blocks/navigation-panel.scss";
+@import "blocks/developer-info.scss";

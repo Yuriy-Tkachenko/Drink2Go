@@ -1,0 +1,18 @@
+@media (max-width: $mobile-width-only) {
+  .site-navigation--closed .site-navigation--nojs {
+    display: none;
+  }
+
+  .site-navigation--nojs .site-navigation-list {
+    display: block;
+    position: static;
+  }
+
+  .site-navigation--closed .site-navigation-list {
+    display: none;
+  }
+
+  .button-disable {
+    display: none;
+  }
+}

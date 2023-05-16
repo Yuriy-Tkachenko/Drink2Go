@@ -1,0 +1,73 @@
+.swiper-button-next,
+.swiper-button-prev {
+  top: 3.9%;
+  height: 100%;
+
+  @media (min-width: $tablet-width) {
+    top: 2.5%;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 3%;
+    width: 80px;
+  }
+
+  &::after {
+    font-size: 20px;
+    color: $base-primary;
+  }
+}
+
+.swiper-button-prev {
+  left: 0;
+
+  &:hover {
+    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+}
+
+.swiper-button-next {
+  right: 0;
+
+  &:hover {
+    background: linear-gradient(266.81deg, #ffffff 3.05%, rgba(255, 255, 255, 0) 97.77%);
+  }
+
+  &:active {
+    background: linear-gradient(266.81deg, rgba(120, 89, 207, 0.25) 2.87%, rgba(120, 89, 207, 0) 97.6%);
+  }
+}
+
+.swiper-pagination {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    top: 87%;
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: $base-white;
+  opacity: 1;
+  width: 62px;
+  height: 4px;
+  border-radius: 0%;
+
+  &:hover {
+    background-color: $primary-opacity;
+  }
+
+  &:active {
+    background-color: $base-primary;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $base-primary;
+  opacity: none;
+}

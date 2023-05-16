@@ -1,0 +1,31 @@
+.social-list {
+  display: flex;
+}
+
+.social-item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.social-item__link {
+  width: 40px;
+  height: 40px;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  fill: $base-grey;
+
+
+  &:hover {
+    background-color: $base-secondary;
+  }
+
+  &:active {
+    background-color: $primary-opacity;
+  }
+}
+
+.social-item__link:hover > .social-item__picture {
+  fill: $base-primary;
+}

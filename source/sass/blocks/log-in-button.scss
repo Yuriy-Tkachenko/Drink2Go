@@ -1,0 +1,39 @@
+.log-in-button {
+  @include button;
+  font-family: "Montserrat", sans-serif;
+  padding: 21px;
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 20px 0 44px;
+  }
+}
+
+.log-in-button:hover > .button-icon {
+  fill: $base-primary;
+}
+
+.log-in-button:hover > .button-name {
+  color: $base-primary;
+}
+
+.button-name {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    @include button;
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    color: $base-primary;
+  }
+}

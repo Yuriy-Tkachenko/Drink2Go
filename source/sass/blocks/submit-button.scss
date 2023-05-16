@@ -1,0 +1,31 @@
+.submit-button {
+  @include button;
+  display: block;
+  background-color: $base-primary;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-white;
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 137px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 100%;
+  }
+}

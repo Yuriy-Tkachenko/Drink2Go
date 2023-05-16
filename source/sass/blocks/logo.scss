@@ -1,0 +1,33 @@
+.logo {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.logo__picture {
+  display: block;
+  width: 32px;
+  height: 36px;
+
+  @media (min-width: $tablet-width) {
+    width: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+    margin-right: 20px;
+  }
+}
+
+.logo__name {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    width: 126px;
+  }
+}

@@ -1,0 +1,52 @@
+.links-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  border-bottom: 1px solid $base-secondary;
+  margin: 0 -20px;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    height: 100%;
+    padding: 42px 20px 32px 20px;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 20px 0 20px;
+    margin-right: 30px;
+  }
+}
+
+.links-panel__logo {
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 0 50px 0;
+    width: 318px;
+  }
+}
+
+.links-panel__logo-name {
+  @media (min-width: $desktop-width) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-block;
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+.links-panel__picture {
+  width: 82px;
+  height: 36px;
+
+  @media (min-width: $tablet-width) {
+    width: 170px;
+  }
+}

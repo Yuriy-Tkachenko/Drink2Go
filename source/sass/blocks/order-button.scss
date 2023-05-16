@@ -1,0 +1,18 @@
+.order-button {
+  @include button;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $base-white;
+  padding: 8px 20px;
+  background-color: $base-primary;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+}

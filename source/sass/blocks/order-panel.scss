@@ -1,0 +1,24 @@
+.order-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-panel__order-button {
+  padding-left: 46px;
+  position: relative;
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+}
+
+.order-panel__button-icon {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
