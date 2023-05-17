@@ -31,22 +31,23 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 350px 350px;
+    justify-content: center;
     gap: 30px;
     margin-bottom: 70px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 317px 317px 317px;
     margin-bottom: 60px;
   }
 }
 
 .result-list__item {
-  padding: 40px 20px 20px;
   text-align: left;
   border-radius: 4px;
   background-color: $base-white;
+  padding: 40px 20px 20px;
   margin: 0 0 20px 0;
 
   @media (min-width: $tablet-width) {
